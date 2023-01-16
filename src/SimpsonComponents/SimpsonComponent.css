@@ -1,0 +1,16 @@
+.image{
+    height: 350px;
+    width: 250px;
+    border-radius: 10px;
+    border: #171717 solid 3px;
+}
+.wrapSimp{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.name{
+    color: yellow;
+    background: #171717;
+    border-radius: 10px;
+}

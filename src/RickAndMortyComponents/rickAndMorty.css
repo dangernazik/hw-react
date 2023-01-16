@@ -1,0 +1,15 @@
+.image1{
+    height: 350px;
+    width: 350px;
+    border-radius: 100%;
+    border: teal solid 4px;
+}
+.name1{
+    font-size: 30px;
+}
+.bald{
+    color: teal;
+}
+p{
+    font-size: 20px;
+}
