@@ -1,11 +1,14 @@
+
 .App {
   text-align: center;
+  background: #202121;
 
 }
 .wrapSimp{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 200px;
 }
 .wrapAllRick{
   display: flex;
@@ -18,8 +21,13 @@
   justify-content: space-evenly;
 }
 .wrapCharacter{
+  flex-direction: column;
+  width: 600px;
+  border: teal solid 2px;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 20px;
+  background: #131414;
 }
 
 

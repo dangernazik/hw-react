@@ -56,7 +56,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Simpson family</h1>
+            <h1 style={{color: "yellow"}}>Simpson family</h1>
             <div className={'wrapSimp'}>
                 <SimpsonComponent name="Homer" url= "https://static.displate.com/280x392/displate/2020-06-07/58344d43f0ed84bff996cb6687c1ab62_1b5eba958a1afcdd5f5ed2ab4acc1f4b.jpg"/>
                 <SimpsonComponent name="Marge" url = "https://media.vogue.co.uk/photos/5d546fcfc6ae3400088a6655/master/pass/original"/>
@@ -66,7 +66,7 @@ function App() {
             </div>
 
 
-            <h1 style={{color: "teal"}}>Rick and Morty</h1>
+            <h1 style={{color: "white"}}>Rick and Morty</h1>
             <div className={'wrapAllRick'}>
                 <div className={'wrapRick'}>
                     <div className={'wrapCharacter'}>
