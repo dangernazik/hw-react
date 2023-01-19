@@ -38,10 +38,24 @@
 .hr{
   height:2px;
   border-width:0;
-  color:gray;
-  background-color:gray;
+  color: #bf0b41;
+  background-color:#bf0b41;
 }
+.wrap-spacex{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
+}
+.wrap-spacex img{
+  width: 300px;
+  margin-bottom: 130px;
+}
+.spacex{
+  text-align: center;
+
+}
 
 
 
