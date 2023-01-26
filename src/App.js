@@ -1,10 +1,27 @@
+import {Route, Routes} from "react-router-dom";
+
+import {AlbumPage, CommentsPage, TodosPage, HomePage, PostPage} from "./pages";
+import {MainLayout} from "./layouts/MainLayout";
 
 
 function App() {
   return (
-    <div className="App">
+    <Routes>
+        <Route path={'/'} element={<MainLayout/>}>
+            <Route index element={<HomePage/>}/>
+            <Route path={'albums'} element={<AlbumPage/>}/>
+            <Route path={'todos'} element={<TodosPage/>}/>
 
-    </div>
+            <Route path={'comments'} element={<CommentsPage/>}>
+
+            <Route path={':postId'} element={<PostPage/>}/>
+
+            </Route>
+
+
+        </Route>
+
+    </Routes>
   );
 }
 
