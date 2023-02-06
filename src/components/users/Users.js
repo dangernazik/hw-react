@@ -1,18 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {userService} from "../../services";
+import {useDispatch, useSelector} from "react-redux";
+import {userActions} from "../../redux";
 import {User} from "./User";
-import {axiosService} from "../../services/axiosService";
-
 
 const Users = () => {
-    const [users, setUsers] = useState([])
 
+    const dispatch = useDispatch();
+    const {users} = useSelector(state => state.users);
 
-    useEffect(() => {axiosService.get('/users').then(value => value.data).then(value => setUsers([...value]))}, [])
+    useEffect(()=> {
 
+        userService.getAll().then(({data})=> dispatch(userActions.getAll(data)))
+    }, [])
     return (
-
-        <div className={'wrap'}>
-            {users.map(user => <User key={user.id}  user={user} />)}
+        <div>
+            {users.map(user => <User key={user.id} user={user}/>)}
         </div>
     );
 };

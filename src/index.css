@@ -6,56 +6,9 @@
 }
 .wrap{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.user{
-  margin-top: 20px;
-  display: flex;
-  width: 47vw;
-  column-gap: 20px;
-  margin-bottom: 50px;
-  margin-left: 30px;
-  justify-content: space-evenly;
-
-}
-.button-div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 15px;
-}
-.button-info{
-  height: 40px;
-  width: 150px;
-  border:  black solid 1px;
-  border-radius: 6px;
-}
-.button-info:hover{
-  border: #bf0b41 solid 2px;
+  justify-content: space-between;
 }
 
-.hr{
-  height:2px;
-  border-width:0;
-  color: #bf0b41;
-  background-color:#bf0b41;
-}
-.wrap-spacex{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-}
-.wrap-spacex img{
-  width: 300px;
-  margin-bottom: 130px;
-}
-.spacex{
-  text-align: center;
-
-}
 
 
 

@@ -1,16 +1,20 @@
 import {Users} from "./components/users/Users";
-import {Launches} from "./components/spaceX/Launches";
 import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-         <Users />
+import {Posts} from "./components/posts/Posts";
+import {Header} from "./components/header/header";
 
-      <hr className={'hr'}/>
-        <Launches />
-    </div>
-  );
+function App() {
+    return (
+        <div className="App">
+            <Header/>
+            <div className={'wrap'}>
+
+            <Users/>
+            <Posts/>
+            </div>
+        </div>
+    );
 }
 
 export default App;

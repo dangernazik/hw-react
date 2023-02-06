@@ -1,34 +1,17 @@
-import React, {useState} from "react";
-import {Posts} from "./Posts";
-import {userService} from "../../services/userService";
+import React from 'react';
+import {useDispatch} from "react-redux";
+import {userActions} from "../../redux";
 
 const User = ({user}) => {
-
-    const {id, name} = user
-    const [postDetails, setPostDetails] = useState(null)
-
-    const handleClick = async () => {
-        const data = await userService.getAllPosts(id).then(val => val.data);
-        setPostDetails([...data]);
-    }
-
+    const { name , id, username} = user
+    const dispatch = useDispatch()
     return (
-        <div className={'user-wrap'}>
-            <div className="user">
-                <div><p><b style={{color: '#bf0b41'}}>ID:</b> {id}</p>
-                    <p><b style={{color: '#bf0b41'}}>NAME:</b> {name}</p>
-                </div>
-                <div className={'button-div'}>
-                    <button className={'button-info'} onClick={handleClick}><b style={{color: '#bf0b41'}}>Post
-                        Information</b></button>
-                </div>
-            </div>
-            <div >
-                {postDetails && <Posts posts={postDetails}/>}
-            </div>
+        <div>
+            <div>id: {id}</div>
+            <div>name: {name}</div>
+            <div>username: {username}</div>
+            <button onClick={() =>dispatch(userActions.setSelectedUser(user))}>click</button>
         </div>
-
-
     );
 };
 
